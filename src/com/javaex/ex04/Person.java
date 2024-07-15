@@ -1,4 +1,4 @@
-package com.javaex.ex03;
+package com.javaex.ex04;
 
 public class Person {
 
