@@ -10,25 +10,30 @@ public class Ex01 {
 
 	public static void main(String[] args) throws IOException {
 
+		// I/O스트림 준비
 		InputStream in = new FileInputStream("C:\\javaStudy\\img.jpg");
 		OutputStream out = new FileOutputStream("C:\\javaStudy\\byteimg.jpg");
 
+		// 반복
 		while (true) {
 
+			// 데이터 읽기
 			int data = in.read();
-			 System.out.println(data);
+			System.out.println("data:" + data);
 
+			// 다 읽으면 반복문 빠져나감
 			if (data == -1) {
-				//System.out.println("다 읽었음");
+				System.out.println("읽기 끝");
 				break;
 			}
 
+			// 데이터 쓰기
 			out.write(data);
 
 		}
-		
-		System.out.println("복사 끝");
-		
+
+		System.out.println("프로그램 종료");
+
 		out.close();
 		in.close();
 
